@@ -1,0 +1,9 @@
+div {
+    display: flex;
+    flex-direction: column;
+    width:500px;
+}
+
+div:nth-last-child(1) {
+    flex-direction: row;
+}
