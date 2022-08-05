@@ -10,23 +10,31 @@
 </head>
 
 <body>
-<!-- test -->
+    <!-- test -->
     <div>
         <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
-        alt="Paddle Image">
+            alt="Paddle Image">
         <h1>Ping Pong Score Keeper</h1>
     </div>
     <div>
-        <h2><span id="p1Score">0</span> to <span id="p2Score">0</span></h2>
+        <p id="score">
+            <b>
+                <span id="p1Score">0</span> to <span id="p2Score">0</span>
+            </b>
+        </p>
         <p>Use the buttons below to keep score.</p>
-        <label for="playingTo">Playing To</label>
-        <select name="playingTo" id="playingTo">1</select>
+        <div id="dropdown">
+            <label for="playingTo"><b>Playing To</b></label>
+            <select name="playingTo" id="playingTo">1</select>
+        </div>
     </div>
-    <div>
+    <div id="buttons">
         <input type="button" id='p1' value="+1 Player One">
         <input type="button" id='p2' value="+1 Player Two">
         <input type="button" id='reset' value="Reset">
     </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
