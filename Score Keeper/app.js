@@ -15,7 +15,7 @@ const p2Score = document.querySelector('#p2Score');
 
 const playerWon = () => {
     if (p1Score.innerText === dropdown.value || p2Score.innerText === dropdown.value) {
-        if (p1Score > p2Score) {
+        if (p1Score.innerText > p2Score.innerText) {
             p1Score.style.color = 'green';
             p2Score.style.color = 'red'; 
         } else {
