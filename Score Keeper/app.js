@@ -19,8 +19,8 @@ const playerWon = () => {
             p1Score.style.color = 'green';
             p2Score.style.color = 'red'; 
         } else {
-        p1Score.style.color = 'red';
-        p2Score.style.color = 'green'; 
+            p1Score.style.color = 'red';
+            p2Score.style.color = 'green'; 
         }
         p1Btn.disabled = true;
         p2Btn.disabled = true;
@@ -29,17 +29,7 @@ const playerWon = () => {
     }
 }
 
-p1Btn.addEventListener('click', () => {
-    p1Score.innerText++;
-    playerWon();
-})
-
-p2Btn.addEventListener('click', () => {
-    p2Score.innerText++;
-    playerWon();
-})
-
-resetBtn.addEventListener('click', () => {
+const reset = () => {
     p1Score.innerText = 0;
     p2Score.innerText = 0;
     p1Score.style.color = 'black';
@@ -48,5 +38,17 @@ resetBtn.addEventListener('click', () => {
     p2Btn.disabled = false;
     p1Btn.style.opacity = 1;
     p2Btn.style.opacity = 1;
-})
+}
 
+p1Btn.addEventListener('click', () => {
+    p1Score.innerText++;
+    playerWon();
+});
+
+p2Btn.addEventListener('click', () => {
+    p2Score.innerText++;
+    playerWon();
+});
+
+resetBtn.addEventListener('click', reset);
+dropdown.addEventListener('change', reset);
